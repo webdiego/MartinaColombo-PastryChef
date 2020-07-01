@@ -1,0 +1,151 @@
+// COLOR VARIABLES
+$color-primary: #FBBB26;
+$color-primary-light:  #fcb50e21;
+$color-primary-light-1: #ffb30286;
+$color-primary-light-2: #ffb30256;
+
+$color-book : rgb(221, 219, 219);
+
+
+
+
+//RESPONSIVE BREACKPOINTS
+
+$largest:75em; //1200px / 16=75em
+$large:62em; //1000px
+$medium:50em; //800px
+$small:37.5em; //600px
+$smallest:27.5em; //450px
+
+$landscape:25em; //400px
+
+*,
+*::before,
+*::after{
+ padding: 0;
+ margin: 0;
+ box-sizing:inherit;
+}
+html{
+  box-sizing: border-box;
+  font-size: 62,5%;
+  font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
+}
+
+
+//TIPOGRAPHY
+.heading-primary{
+text-transform: uppercase;
+color: $color-primary;
+font-size: 4rem;
+letter-spacing: .2rem;
+font-weight: 400;
+line-height: 8rem;
+
+@media only screen and (max-width:$large){
+  font-size: 3rem;
+  line-height: 4rem;
+
+ }
+@media only screen and (max-width:$medium){
+  font-size: 2rem;
+  line-height: 2rem;
+
+ }
+ @media only screen and (max-width:$small){
+  font-size: 1.7rem;
+  line-height: 2rem;
+
+ 
+ }
+
+ &-card{
+   padding-top: 1rem;
+   text-align: center;
+   text-transform: uppercase;
+   text-decoration: underline;
+   text-decoration-color: $color-primary;
+   text-decoration-line: underline;
+   font-size: 1.5rem;
+
+   @media only screen and (max-width:$small){
+    font-size: 1.4rem;
+    
+  
+  
+   }
+   
+
+   
+ }
+}
+
+.heading-secondary{
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: .2rem;
+
+  @media only screen and (max-width:$large){
+    font-size: 1.4rem;
+    line-height: 4rem;
+  
+   }
+  @media only screen and (max-width:$medium){
+    font-size: 1rem;
+    line-height: 4rem;
+  
+   }
+ 
+}
+
+
+//MIXIN
+@mixin card {
+ 
+  border-radius: 20px;
+  height: 14rem;
+  box-shadow:0px 5px 14px 3px rgba(0,0,0,0.45);
+
+  display: grid;
+  grid-template-columns: max-content;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+   
+  @media only screen and (max-width:$large){
+    height: 13rem;
+    
+  }
+  @media only screen and (max-width:$smallest){
+    height: 10rem;
+    
+  }
+      @media only screen and (max-height:$landscape){
+        height: 7rem;
+      }
+
+  
+}
+
+@mixin content-card {
+  width: 4rem;
+  border-radius: 50%;
+
+  @media only screen and (max-width:$small){
+    width: 3rem;
+ 
+   }
+   @media only screen and (max-height:$landscape){
+    width: 2.5rem;
+    margin-top: 1rem;
+  }
+      
+}
+
+
+@mixin card-jobs {
+  border-radius: 20px;
+  box-shadow:0px 5px 14px 3px rgba(0,0,0,0.45);
+}

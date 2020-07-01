@@ -1,0 +1,179 @@
+
+
+
+.world{
+  height: 100vh;
+  background-color: $color-primary-light;
+  clip-path: polygon(100% 0, 100% 75%, 0 100%, 0 25%);
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit ,minmax(31rem ,max-content ));
+  align-items: center;
+  justify-content: center;
+ 
+  
+  @media only screen and (max-width:$small){
+    grid-template-columns: 1fr;
+
+   }
+
+  @media only screen and (max-width:$large){
+    clip-path:polygon(100% 0, 100% 85%, 0 100%, 0 15%)
+   
+    }
+
+
+///MAP
+  &__map{
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  @media only screen and (max-width:$large){
+   align-self: end;
+  
+    }
+    
+  h2{
+    text-align: center;
+    padding: .5rem;
+    text-decoration: underline;
+    text-decoration-color: $color-primary;
+    @media only screen and (max-height:$landscape){
+    font-size: 1.1rem;
+    }
+    
+  }
+  
+    img{
+    width:60vh;
+   
+    padding: 1rem;
+
+    @media only screen and (max-width:$large){
+      width:30rem;
+    height: 33vh;
+    padding: 0;
+
+      }
+    
+      @media only screen and (max-width:$medium){
+        width: 22rem;
+      height: 29vh;
+        }
+        @media only screen and (max-width:$smallest){
+          width: 20rem;
+        height: 25vh;
+          }
+
+          @media only screen and (max-height:$landscape){
+            width: 18rem;
+            height: 30vh;
+            margin-bottom: 1rem;
+          }
+
+    
+    }
+  }
+
+////CARD
+
+  &__card{
+    display: grid;
+    grid-template-columns: repeat(3,11rem);
+  grid-template-rows: repeat(1,1fr);
+    text-align: center;
+    justify-content: center;
+    @media only screen and (max-height:$landscape){
+      grid-template-columns: repeat(3,9rem);
+    }
+    @media only screen and (max-width:$small){
+      
+      grid-template-columns: repeat(3,9rem);
+      
+    }
+    @media only screen and (max-width:$smallest){
+          grid-template-columns: repeat(3,7rem);
+       
+         }
+
+    @media only screen and (max-width:$large){
+      align-self: start;
+     
+       }
+       @media only screen and (max-width:$smallest) and (max-height:$smallest){
+        grid-template-columns: repeat(3,7rem);
+     
+       }
+   
+  .heading-tertiary {
+   
+    @media only screen and (max-width:$small){
+      font-size: .8rem;
+      grid-template-columns: repeat(3,9rem);
+   
+     }
+     @media only screen and (max-height:$landscape){
+      font-size: .8rem;
+    }
+  }
+  .p-number{
+    font-weight: bold;
+    padding: 1rem;
+    align-self: start;
+
+    &-infinite{
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    @media only screen and (max-height:$landscape){
+    padding: 0;
+    margin-bottom: .5rem;
+    }
+    
+   
+  }
+    
+      &-1{
+    @include card;
+    transform: translateX(9%);
+    background-color: $color-primary-light-1;
+  
+
+
+    img{  
+      @include content-card;
+      justify-self: center;
+      }
+     
+    }
+
+    &-2{
+      @include card;
+      background-color: $color-primary;
+      z-index: 10;
+      transform: translateY(5%);
+      img{
+        @include content-card;
+        background-color: rgb(255, 255, 255);
+        border: 2px black solid;
+        @media only screen and (max-height:$landscape){
+          border: 1.5px black solid;
+         }
+      }
+    }
+
+    &-3{
+      @include card;
+      transform: translateX(-9%);
+      background-color: $color-primary-light-2;
+      
+      img{
+        @include content-card;
+        background-color: rgba(255, 255, 255, 0.788);
+      }
+    }
+  }
+  
+}

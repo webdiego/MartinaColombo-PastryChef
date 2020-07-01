@@ -1,0 +1,91 @@
+.presentation{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  margin: 5rem 9rem;
+  
+  
+   @media only screen and (max-width:$medium){
+    margin-bottom: 6rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0;
+    
+
+   }
+   @media only screen and (max-width:$small){
+    flex-direction: column;
+    height: 30vh;
+    
+  
+  
+   }
+ 
+   &__img{
+
+
+   img{
+     width: 9rem;
+     height: 9rem;
+     border-radius: 50%;
+     border: .5rem solid $color-primary;
+     
+     @media only screen and (max-width:$small){
+      margin-bottom: 2rem;
+    
+    
+     }
+   }
+ }
+
+ &__header{
+  margin-left: 2rem;
+  line-height: 1.5;
+  @media only screen and (max-width:$small){
+   margin: 0;
+  
+  
+   }
+
+
+  .heading-tertiary{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    padding: .5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    border-radius: 10px;
+    animation: pulse 3s infinite ease-in-out;
+    
+    @keyframes pulse {
+      0% {
+        background-color: white;
+      }
+      70% {
+        background-color:$color-primary
+      }
+      100% {
+        background-color:white;
+      }
+    }
+
+
+    @media only screen and (max-width:$medium){
+      font-size: 1.2rem;
+      text-align: center;
+      display: block;
+      
+    
+    
+     }
+  }
+ }
+}
+
+//RESUME
+.pastry{
+  text-decoration: none;
+  color: black;
+  background-color: $color-primary;
+}
