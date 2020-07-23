@@ -94,11 +94,11 @@ img{
 //COPYRIGHT
 .copi{
   background-color: rgb(83, 83, 83);
-  height: 10vh;
+  height: 20vh;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   padding-right: 2rem;
 
   @media only screen and (max-height:$landscape){
@@ -119,37 +119,10 @@ img{
    font-size: 1rem;
  }
 
+.pizza{
+  width: 8rem;
+  margin-left: 2rem;
 
-.diego{
-  
-  position: relative;
-  margin: .5rem;
- font-family: 'Gamja Flower', cursive;
- font-size: 1.2rem;
- font-weight: lighter;
- color: rgb(0, 0, 0);
- text-decoration: none;
- color: white;
- 
-}
-.o{
-  color: rgb(189, 77, 12);
- 
 }
 
-.planet{
- background-image: linear-gradient(
-  to bottom, 
-   rgb(210, 255, 11),
-    rgb(22, 89, 212)
- ) ;
- 
- position: absolute;
- width: 1.5rem;
- height: 1.5rem;
- border-radius: 40%;
- 
- 
- 
-}
 }
